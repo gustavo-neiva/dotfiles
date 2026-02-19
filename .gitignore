@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Local configuration files
+*.local
+.local/
+
+# History files
+*.history
+*.hist
+zsh_history
+.bash_history
+.python_history
+
+# Temporary and cache files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.cache/
+tmp/
+temp/
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Sensitive data (tokens, keys)
+# Files containing actual API tokens should not be committed
+.env
+.env.local
+*.secret
+*.private

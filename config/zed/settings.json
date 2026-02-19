@@ -1,0 +1,120 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent": {
+    "dock": "left",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "zoomed_padding": true,
+  "use_system_window_tabs": true,
+  "active_pane_modifiers": {
+    "inactive_opacity": 1,
+  },
+  "agent_ui_font_size": 16.0,
+  "buffer_line_height": "comfortable",
+  "buffer_font_family": "Menlo",
+  "git": {
+    "blame": {
+      "show_avatar": false,
+    },
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+  },
+  "debugger": {
+    "button": true,
+    "dock": "left",
+  },
+  "status_bar": {
+    "cursor_position_button": true,
+  },
+  "project_panel": {
+    "hide_root": false,
+    "dock": "left",
+    "entry_spacing": "comfortable",
+    "hide_gitignore": false,
+    "button": true,
+  },
+  "title_bar": {
+    "show_menus": false,
+    "show_project_items": true,
+    "show_branch_icon": true,
+  },
+  "terminal": {
+    "dock": "left",
+    "button": false,
+  },
+  "outline_panel": {
+    "indent_size": 12.0,
+    "default_width": 380.0,
+    "dock": "left",
+  },
+  "notification_panel": {
+    "button": false,
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
+  "git_panel": {
+    "status_style": "icon",
+    "default_width": 380.0,
+    "dock": "left",
+    "tree_view": false,
+  },
+  "icon_theme": "Material Icon Theme",
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false,
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "file_types": {
+    "erb": ["*.html.erb", "*.erb"],
+  },
+  "show_edit_predictions": true,
+  "tab_size": 2,
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 13.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark Pro",
+  },
+  "languages": {
+    "Markdown": {
+      "show_edit_predictions": false,
+    },
+    "JavaScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+      },
+      "prettier": {
+        "allowed": false,
+      },
+    },
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "rubocop", "!solargraph"],
+      "formatter": "language_server",
+      "format_on_save": "on",
+    },
+  },
+  "search": {
+    "include_ignored": false,
+  },
+  "minimap": {
+    "show": "never",
+  },
+  "autosave": "off",
+  "auto_indent_on_paste": true,
+  "linked_edits": true,
+}
