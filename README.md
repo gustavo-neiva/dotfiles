@@ -33,6 +33,19 @@ Ensure these tools are installed before using these dotfiles:
   npm install -g @anthropic-ai/claude-code
   ```
 
+- **asdf** - Multiple runtime version manager (using the latest binary)
+  ```bash
+  # Install asdf VM (latest binary release)
+  # Check https://github.com/asdf-vm/asdf/releases for the latest version
+  ASDF_VERSION="v0.16.0"  # Update to latest version
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch $ASDF_VERSION
+
+  # Add to shell (already included in .zshrc)
+  # Or manually add:
+  # . "$HOME/.asdf/asdf.sh"
+  # . "$HOME/.asdf/completions/asdf.bash"
+  ```
+
 ## Installation
 
 1. **Clone the repository**
@@ -75,7 +88,9 @@ dotfiles/
 ├── README.md                     # This file
 ├── install.sh                    # Bootstrap script
 ├── home/                         # Files that go to ~/
-│   └── .zshrc                    # Main zsh configuration
+│   ├── .zshrc                    # Main zsh configuration
+│   ├── .tool-versions            # asdf language versions
+│   └── .asdfrc                   # asdf configuration
 ├── config/                       # Files that go to ~/.config/
 │   ├── zed/
 │   │   └── settings.json         # Zed editor settings
@@ -128,6 +143,42 @@ dotfiles/
 - Custom skills for documentation lookup and session management
 
 ## Manual Setup Steps
+
+### asdf Languages
+
+The `.tool-versions` file defines the language versions to install. After linking the file, install all languages:
+
+```bash
+# Add all plugins first
+asdf plugin add nodejs
+asdf plugin add ruby
+asdf plugin add python
+asdf plugin add pnpm
+asdf plugin add java
+asdf plugin add elixir
+asdf plugin add erlang
+asdf plugin add golang
+asdf plugin add rust
+
+# Install all versions defined in .tool-versions
+asdf install
+
+# Or install specific versions
+asdf install nodejs 25.6.0
+asdf install ruby 3.4.2
+asdf install python 3.11.5
+# ... etc
+```
+
+**Note: Erlang and Elixir require additional setup:**
+```bash
+# Install required build tools for Erlang on macOS
+brew install autoconf curl openssl@3 libxslt libyaml wxwidgets
+
+# For Elixir/Erlang, you may need to install Kerl
+asdf install erlang 27.0.1
+asdf install elixir 1.17.2-otp-27
+```
 
 ### API Tokens
 

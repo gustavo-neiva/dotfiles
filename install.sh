@@ -57,6 +57,8 @@ home_files=(
     ".zshrc"
     ".zprofile"
     ".gitignore"
+    ".tool-versions"
+    ".asdfrc"
 )
 
 for file in "${home_files[@]}"; do
