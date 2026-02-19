@@ -101,10 +101,42 @@
       "prettier": {
         "allowed": false,
       },
+      "format_on_save": "on",
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+      },
+      "prettier": {
+        "allowed": false,
+      },
+      "format_on_save": "on",
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+      },
+      "prettier": {
+        "allowed": false,
+      },
+      "format_on_save": "on",
+    },
+    "Python": {
+      "format_on_save": "on",
     },
     "Ruby": {
       "language_servers": ["ruby-lsp", "rubocop", "!solargraph"],
       "formatter": "language_server",
+      "format_on_save": "on",
+    },
+    "ERB": {
+      "format_on_save": "on",
+      "tab_size": 2,
+    },
+    "Rust": {
+      "format_on_save": "on",
+    },
+    "Go": {
       "format_on_save": "on",
     },
   },
@@ -117,4 +149,9 @@
   "autosave": "off",
   "auto_indent_on_paste": true,
   "linked_edits": true,
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+  },
 }
